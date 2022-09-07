@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 >Nhập năm sinh của bạn</h1>
+<input type="text" id="nhapvao">
+<button onclick="tuoi()">Tính tuổi</button>
+<h1 id="hienthi"></h1>
+<script>
+
+    function tuoi() {
+        let tuoii = +document.getElementById('nhapvao').value
+        let can = tuoii % 10
+        let chi = tuoii % 12
+        let kqua
+        let kqua1
+        if (tuoii < 0) {
+            alert('vui long nhap doang hoang')
+        }else
+            switch (can) {
+                case 0:
+                    kqua = "Canh";
+                    break;
+                case 1:
+                    kqua = "Tan";
+                    break;
+                case 2:
+                    kqua = "nham";
+                    break;
+                case 3:
+                    kqua = "quy";
+                    break;
+                case 4:
+                    kqua = "giap";
+                    break;
+                case 5:
+                    kqua = "at";
+                    break;
+                case 6:
+                    kqua = "binh";
+                    break;
+                case 7:
+                    kqua = "dinh";
+                    break;
+                case 8:
+                    kqua = "mau";
+                    break;
+                case 9:
+                    kqua = "ky";
+                    break;
+
+            }
+        switch (chi) {
+            case 0:
+                kqua1 = "than";
+                break;
+            case 1:
+                kqua1 = "dau";
+                break;
+            case 2:
+                kqua1 = "tuat";
+                break;
+            case 3:
+                kqua1 = "hoi";
+                break;
+            case 4:
+                kqua1 = "ty";
+                break;
+            case 5:
+                kqua1 = "suu";
+                break;
+            case 6:
+                kqua1 = "dan";
+                break;
+            case 7:
+                kqua1 = "mao";
+                break;
+            case 8:
+                kqua1 = "thin";
+                break;
+            case 9:
+                kqua1 = "ty";
+                break;
+            case 10:
+                kqua1 = "ngo";
+                break;
+            case 11:
+                kqua1 = "mui";
+                break;
+
+        }
+        document.getElementById('hienthi').innerHTML = kqua + kqua1
+    }
+</script>
+</body>
+</html>
